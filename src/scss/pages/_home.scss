@@ -1,0 +1,104 @@
+.container {
+  max-width: 1321px;
+  width: 100%;
+  //padding: 0 25px;
+  margin: 0 auto;
+}
+body {
+  background: #130523;
+  //background: url('../../src/img/my_photo.jpg') center center/cover no-repeat;
+}
+
+@font-face {
+  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
+  font-family: "docker";
+  // адрес шрифта и тип
+  src: url("../../src/Foreverise-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
+  font-family: "docker2";
+  // адрес шрифта и тип
+  src: url("../../src/Foreverise_1-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.hero {
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__logo {
+    //background: url('../../src/img/test.png') center center/cover no-repeat;
+    //height: 500px;
+    //width: 100px;
+    max-width: 1320px;
+    width: 100%;
+    margin: auto 0;
+  }
+  &__text {
+    display: flex;
+    align-items: flex-end;
+    margin-top: -4%;
+    max-width: 1260px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-right: -15px;
+    p {
+      font-family: "docker2";
+      font-style: normal;
+      font-weight: normal;
+      font-size: 185px;
+      line-height: 80%;
+      //color: rgba(255, 38, 169, 1);
+      color: #FF5EBF;
+      text-shadow: 0px 0px 30px rgba(255, 38, 169, 0.25), 0px 0px 39.3125px rgba(255, 38, 169, 0.25), 0px 0px 31.45px rgba(255, 38, 169, 0.25), 0px 0px 23.5875px rgba(255, 38, 169, 0.25), 0px 0px 15.725px rgba(255, 38, 169, 0.25), 11.7937px 15.725px 3.93125px #000000, 11.7937px 15.725px 11.7937px #000000;
+      @include adaptiv-font(185,40);
+      @media (min-width: 1440px) {
+        font-size: 185px;
+      }
+    }
+    .p_one {
+      font-size: 270px;
+      margin-right: -15px;
+      //transform: scale3d(1.3,1.3,1.3);
+      font-family: "docker2";
+      @include adaptiv-font(230,60);
+      @media (max-width: 768px) {
+        margin-right: -5px;
+      }
+      @media (min-width: 1440px) {
+        font-size: 230px;
+      }
+    }
+    //.o_one {
+    //  &:hover {
+    //    color: #342226;
+    //    text-shadow: 0px 0px 30px rgba(255, 38, 169, 0.25),
+    //    11.7937px 15.725px 3.93125px #000000,
+    //    11.7937px 15.725px 11.7937px #000000;
+    //  }
+    //}
+  }
+}
+
+
+.neon {
+  animation: neon 0.2s ease infinite;
+}
+
+@keyframes neon {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
